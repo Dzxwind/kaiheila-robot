@@ -1,5 +1,6 @@
 import { bot } from 'init/client';
 import { echoMenu } from './commands/echo/echo.menu';
+import { dissMenu } from './commands/diss/diss.menu';
 
 bot.messageSource.on('message', (e) => {
     bot.logger.debug(`received:`, e);
@@ -8,6 +9,8 @@ bot.messageSource.on('message', (e) => {
 });
 
 bot.addCommands(echoMenu);
+
+bot.addCommands(dissMenu);
 
 bot.connect();
 
