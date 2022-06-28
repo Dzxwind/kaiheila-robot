@@ -5,7 +5,8 @@
   "main": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --nolazy -r ts-node/register -r tsconfig-paths/register src/index.ts"
+    "start": "forever start --nolazy -r ts-node/register -r tsconfig-paths/register src/index.ts",
+    "stop": "forever stopall"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-no-null": "^1.0.2",
     "eslint-plugin-prettier": "^3.4.0",
+    "forever": "^4.0.3",
     "ts-node": "^10.8.1",
     "tsconfig-paths": "^3.10.1",
     "typescript": "^4.3.5"
