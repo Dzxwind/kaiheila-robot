@@ -1,8 +1,8 @@
 import { AppCommand, AppFunc, BaseSession, Card } from 'kbotify';
 
 class FFMenu extends AppCommand {
-    code = 'ff';
-    trigger = 'ff';
+    code = 'ffd';
+    trigger = 'ffd';
     help =
         '请在ff后加个空格再输入关键词，我会带你去飞机wiki，不用谢我，我是雷锋——Dzxwind';
 
