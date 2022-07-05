@@ -3,6 +3,7 @@ import { echoMenu } from './commands/echo/echo.menu';
 import { dissMenu } from './commands/diss/diss.menu';
 import { ffMenu } from './commands/ff/ff.menu';
 import { ffxivMenu } from './commands/ff/ff.main.menu';
+import TextMessage from 'kbotify'
 
 bot.messageSource.on('message', (e) => {
     bot.logger.debug(`received:`, e);
@@ -19,6 +20,13 @@ bot.addCommands(dissMenu);
 bot.addCommands(ffMenu);
 
 bot.addAlias(ffxivMenu, 'FF', 'FF14', 'ff14');
+
+bot.on('buttonClick', (e) => {
+    console.log(e);
+    // if(e.value === 'ff14') {
+    //     bot.execute('FF14', ['攻略'], e)
+    // }
+})
 
 bot.connect();
 

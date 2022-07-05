@@ -17,7 +17,21 @@ class EchoMenu extends MenuCommand {
     //     );
     // };
     intro = '复读菜单';
-    menu = new Card().addText('一些卡片里需要展示的东西').addTitle("测试标题").toString();
+    menu = new Card().addText('一些卡片里需要展示的东西').addTitle("测试标题").addModule({
+        type: "action-group",
+        elements: [
+          {
+            type: "button",
+            theme: "primary",
+            value: "ff14",
+            click: "return-val",
+            text: {
+              "type": "plain-text",
+              "content": "FF14"
+            }
+          }
+        ]
+      }).toString();
     // menu = new 
     useCardMenu = true; // 使用卡片菜单
     
