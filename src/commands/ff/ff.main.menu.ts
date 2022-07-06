@@ -26,6 +26,7 @@ class FFXIVMenu extends AppCommand {
                     }
                     switch (temp_split[2]) {
                         case "龙骑士":
+                            
                             return session.sendCard([
                                 {
                                   "type": "card",
